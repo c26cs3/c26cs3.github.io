@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+<style type="text/css">
+	#music{
+		width: 200px;
+		height: 200px;
+		background-color: red;
+	}
+</style>
+
+</head>
+<body>
+
+	<div id="music"></div>
+<script type="text/javascript">
+
+	var count = 0;
+	
+	music.addEventListener("click", function(){
+		count = count + 1
+
+	
+
+	if (count % 2 == 0 ) {
+		console.log(count);
+		music.style.backgroundColor = "green";
+	}
+	else if (count % 2 == 1){
+		console.log(count);
+		music.style.backgroundColor = "red";
+	}
+
+
+})
+</script>
+
+<a href="projects.html">
+	back to projects
+</a>
+
+</body>
+</html>
