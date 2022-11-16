@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+	#picture{
+		height: 800px;
+		width: 400px;
+
+		background-size: contain;
+		background-repeat:no-repeat ;
+		
+
+	}
+	#london{
+		height: 700px;
+		width: 300px;
+		background-image: url(https://m.media-amazon.com/images/I/417hvcED61L.jpg);
+		background-size: contain;
+		background-repeat:no-repeat ;
+		position: absolute;
+		top: 200px;
+		left: 100px;
+
+	}
+	#baseball{
+		height: 700px;
+		width: 300px;
+		background-image: url(baseball.jpg);
+		background-size: contain;
+		background-repeat:no-repeat ;
+		position: absolute;
+		left: 1050px;
+		top: 200px;
+	}
+</style>
+
+
+</head>
+<body>
+<center><h1>Happy Birthday William!</h1><div id="picture"></div></center>
+<body style="background-color: red;">
+
+<div id="london"></div>
+<div id="baseball"></div>
+<audio id= "song" src="Horn.mp3" controls></audio>
+<script type="text/javascript">
+	var count = 0;
+
+	document.addEventListener("click", function(){
+		count = count + 1
+	
+
+	if (count % 2 == 0 ) {
+		console.log(count);
+		picture.style.backgroundImage = "url(-)"
+		song.pause();
+	}
+	else if (count % 2 == 1){
+		console.log(count);
+		picture.style.backgroundImage = "url(https://m.media-amazon.com/images/I/61X7UHjhHHL._AC_UL1200_.jpg)"
+		song.play();
+
+
+	}
+
+
+})
+
+</script>
+
+<a href="projects.html">
+	Go home
+</a>
+
+</body>
+</html>
