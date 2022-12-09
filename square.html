@@ -25,6 +25,15 @@
             font-size:;
             color: white;
         }
+        #box{
+            width: 100px;
+            height: 100px;
+
+            background-image: url(logo.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: absolute;
+        }
     </style>
 </head>
 <body>
@@ -34,7 +43,6 @@
 
 <p> Some great pictures of the Montreal Canadiens <p>
 
-<audio id= "song" src="Horn.mp3" controls></audio>
 <script type="text/javascript">
 
 //For all of your media, to use this, label each file  with numbers (eg.1.jpg, 2.jpg) and keep them in the same folder as this html file. If they are not jpgs, change the extension "jpg" in the recipe below (line 25) to whatever file type they are.  
@@ -45,18 +53,18 @@
 
             var square = document.createElement('div');
                         document.body.appendChild(square);
-            square.style.width = "400px";
-            square.style.height = "400px";
+            square.style.width = "200px";
+            square.style.height = "200px";
             square.style.display = "inline-block";
-            square.style.margin = "10px";
+            square.style.margin = "5px";
             square.style.backgroundRepeat = "no-repeat";
             square.style.border = "1px";
             square.style.backgroundColor = "blue";
-
+            square.style.backgroundSize = "cover"
             square.style.backgroundImage = "url(" + x + ".jpg)";
 
-            square.style.backgroundSize = "fill";
-            square.style.backgroundSize = "contain";
+            square.style.backgroundPosition = "center"
+ 
             square.id = "square" + x;};
 
 
@@ -67,24 +75,29 @@
 
     if (count % 2 == 0 ) {
         console.log(count);
-        document.backgroundColor = "red"
+ 
         song.pause();
     }
     else if (count % 2 == 1){
         console.log(count);
-        document.backgroundColor = "blue"
+
         song.play();
 
     }
 
 })
-    
+    document.addEventListener("mousemove", function(event){
+        console.log(event.clientX, event.clientY)
+        box.style.top = event.clientY - 40 + "px"
+        box.style.left = event.clientX - 40 + "px"
+    })
 //Below, is the for loop in which where the squares are actually made. This for loop is where the function above is actually called. It is called 14 times, (between the values of 0 and 15) and because the variable i is declared in the for loop and is then being passed to the makeSquare recipe, each time the function runs, i changes in value (+1). Thus, the attributes that involve the i change in value as well (eg. the id attribute changes to be whatever i was last time, plus 1.)//
 
     for (var i = 0; i < 15; i++) 
     { makeSquare(i);}
 </script>
-
+<div id="box"></div>
+<audio id= "song" src="Horn.mp3" controls></audio>
 <a href="projects.html"> Go home </a>
 </body>
 </html>

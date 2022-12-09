@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title></title>
+	<style type="text/css">
+		#box{
+			width:500px ;
+			height: 500px;
+			border: 3px;
+			background-color: silver;
+			font-size: 50px;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+	</style>
+</head>
+<body>
+<center>
+	<p>Click on the box to get your Original Six team.</p>
+	<div id="box"></div>
+</center>
+<script type="text/javascript">
+	var og_teams = ["Canadiens", "Rangers", "Blackhawks", "Red Wings", "Bruins", "Maple Leafs"]
+	
+
+	box.addEventListener("click", function(){
+		var random = Math.round(Math.random()*5);
+	console.log(random)
+		box.innerText = og_teams[random]
+		box.style.backgroundImage = "url(" + random + ".png)";
+
+
+	})
+	// if (box.innerText = og_teams[0]) {
+	// 	box.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Montreal_Canadiens.svg/1200px-Montreal_Canadiens.svg.png)"
+	// }
+	// else if (box.innerText = og_teams[1]) {
+	// 	box.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/New_York_Rangers.svg/1200px-New_York_Rangers.svg.png)"
+	// }
+	// else if (box.innerText = og_teams[2]) {
+	// 	box.style.backgroundImage = "url(https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/chi.png)"
+	// }
+	// else if (box.innerText = og_teams[3]) {
+	// 	box.style.backgroundImage = "url(https://a.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/det.png)"
+	// }
+	// else if (box.innerText = og_teams[4]) {
+	// 	box.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Boston_Bruins.svg/1200px-Boston_Bruins.svg.png)"
+	// }
+	// else if (box.innerText = og_teams[5]) {
+	// 	box.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/en/thumb/b/b6/Toronto_Maple_Leafs_2016_logo.svg/1200px-Toronto_Maple_Leafs_2016_logo.svg.png)"
+	// }
+
+</script>
+</body>
+</html>
