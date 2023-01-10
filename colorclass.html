@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background-color:rgb(145, 29, 180);
+		}
+		#coordinates{
+			width: 100px;
+			height: 100px;
+			opacity: .5;
+			background-color: black;
+			color: whitesmoke;
+			font-family: courier;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+
+<div id ="coordinates"></div>
+
+<script type="text/javascript">
+	
+	document.addEventListener("click",function(event){
+		console.log(event.clientX, event.clientY)
+
+		coordinates.innerText = event.clientX + "," + event.clientY
+
+	document.body.style.backgroundColor = "rgb(0," event.clientX/2 + "," + event.clientY/2 +")";	
+		
+
+	})
+		
+
+</script>
+
+</body>
+</html>
