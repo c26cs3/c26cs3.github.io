@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#pic{
+			width: 900px;
+			height: 600px;
+			filter: hue-rotate(250deg);
+		}
+
+	</style>
+	<title></title>
+</head>
+<body>
+
+	<img id ="pic" src="nice.jpg">
+	<script type="text/javascript">
+		document.addEventListener("mousemove", function(event){
+			console.log(event.clientX, event.clientY)
+			pic.style.filter = "hue-rotate(" + event.clientX/3 + "deg)" 
+		})
+	</script>
+<a href="projects.html"> Go home </a>	
+</body>
+</html>

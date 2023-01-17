@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#box{
+			width:500px ;
+			height: 500px;
+			border: 3px;
+			background-color: silver;
+			font-size: 50px;
+			background-position: center;
+			background-size: contain;
+			background-repeat: no-repeat;
+			color: limegreen;
+		}
+
+	</style>
+</head>
+<body>
+<center>
+	<p>Click on the box to get your new random color.</p>
+	<div id="box"></div>
+</center>
+<script type="text/javascript">
+box.addEventListener("click", function(){
+	var random2 = Math.round(Math.random()*255);
+	var random3 = Math.round(Math.random()*255)
+	var random1 = Math.round(Math.random()*255)
+	console.log(random1)
+	console.log(random2)
+	console.log(random3)
+	box.style.backgroundColor = "rgb(" + random1 + "," +random2 + "," + random3 +")";
+})
+	
+
+
+</script>
+<a href="projects.html"> Go home</a>
+</body>
+</html>
