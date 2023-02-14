@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#net{
+			width: 600px;
+			height: 600px;
+			background-image:url("https://www.goaliemonkey.com/media/catalog/product/cache/b32e7142753984368b8a4b1edc19a338/6/7/676824014907.jpg");
+			border: 3px;
+			font-size: 50x;
+			background-size: contain;
+			background-repeat: no-repeat;
+			color: navy;
+		}
+
+
+	</style>
+</head>
+<body>
+
+<center>
+	<h1>Click in the net for a hockey puck!</h1>
+	<div id="net"></div>
+</center>
+
+<script type="text/javascript">
+	var pucks = ["2018PlayoffsPuck", "QuebecNordiquesPuck", "MonctonWildcatsPuck", "OlympicPuck", "CornellPuck"]
+
+	net.addEventListener("click", function(){
+		var random = Math.round(Math.random()*4);
+	console.log(random)
+		net.innerText = pucks[random] + "!"
+		random = pucks[random]
+		net.style.backgroundImage = "url(" + random + ".jpeg)"
+	})
+
+
+
+</script>
+
+<a href="projects.html">Go home</a>
+
+</body>
+</html>

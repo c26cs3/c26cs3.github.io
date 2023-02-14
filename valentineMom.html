@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+	#picture{
+		height: 800px;
+		width: 400px;
+
+		background-size: contain;
+		background-repeat:no-repeat ;
+		
+
+	}
+	#casa{
+		height: 700px;
+		width: 300px;
+		background-image: url(https://images.squarespace-cdn.com/content/v1/58c1b02e197aea86abe02001/07db20c0-c0b0-494b-b9b3-293f12c35ac6/Untitled+design+%2834%29.png);
+		background-size: contain;
+		background-repeat:no-repeat ;
+		position: absolute;
+		top: 200px;
+		left: 100px;
+	
+
+	}
+	#pizza{
+		height: 700px;
+		width: 300px;
+		background-image: url(https://lp-cms-production.imgix.net/2020-10/GettyRF_842363386.jpg);
+		background-size: contain;
+		background-repeat:no-repeat ;
+		position: absolute;
+		left: 1050px;
+		top: 200px;
+	}
+</style>
+
+
+</head>
+<body>
+
+<center><h1>Happy Valentines Day Mom!</h1><div id="picture"></div></center>
+<body style="background-color: pink;">
+
+<div id="casa"></div>
+<div id="pizza"></div>
+<center><h2> I love you!</h2></center>
+<audio id= "song" src="TaylorSwift.mp3" controls></audio>
+<script type="text/javascript">
+	var count = 0;
+
+	picture.addEventListener("click", function(){
+		count = count + 1
+	
+
+	if (count % 2 == 0 ) {
+		console.log(count);
+		picture.style.backgroundImage = "url(-)"
+		song.pause();
+	}
+	else if (count % 2 == 1){
+		console.log(count);
+		picture.style.backgroundImage = "url(https://bbk12e1-cdn.myschoolcdn.com/ftpimages/98/news/zoom_news1415456_1415164.jpg)"
+		song.play();
+	}
+	})
+		pizza.addEventListener("click", function(){
+		count = count + 1
+	
+
+	if (count % 2 == 0 ) {
+		console.log(count);
+		pizza.style.backgroundImage = "url(https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Chicago_Cubs_logo.svg/1200px-Chicago_Cubs_logo.svg.png)"
+	
+	}
+	else if (count % 2 == 1){
+		console.log(count);
+		pizza.style.backgroundImage = "url(https://lp-cms-production.imgix.net/2020-10/GettyRF_842363386.jpg)"
+	}
+	})
+
+	casa.addEventListener("click", function(){
+	count = count + 1
+	
+
+	if (count % 2 == 0 ) {
+		console.log(count);
+		casa.style.backgroundImage = "url(https://s3.amazonaws.com/external_clips/attachments/2717576/original/AdobeStock_264693568.jpg?1565044658)"
+	
+	}
+	else if (count % 2 == 1){
+		console.log(count);
+		casa.style.backgroundImage = "url(https://images.squarespace-cdn.com/content/v1/58c1b02e197aea86abe02001/07db20c0-c0b0-494b-b9b3-293f12c35ac6/Untitled+design+%2834%29.png)"
+	}
+	})
+</script>
+
+
+
+<a href="projects.html">
+	Go home
+</a>
+
+</body>
+</html>
