@@ -84,12 +84,23 @@
 				y = y - 10
 				buggy.style.top = y + 'px'
 			}
-			if (event.keyCode == 37){
+			if (event.keyCode == 37 ){
 				x = x -10
 				buggy.style.left = x + 'px'
 			}
 			
-
+			if (x > 50 && x < 200 && y > 50 && y < 350){
+				buggy.style.left = "0px"
+				buggy.style.top = "0px"
+			}
+			if (x > 550 && x < 700 && y > 50 && y < 350){
+				buggy.style.left = "0px"
+				buggy.style.top = "0px"
+			}
+			if (x > 950 && x < 1250 && y > 100 && y < 250){
+				buggy.style.left = "0px"
+				buggy.style.top = "0px"
+			}
 		})
 
 
