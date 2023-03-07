@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.button{
+		width: 100px;
+		height: 100px;
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+		left: 50px;
+	}
+	#rock{
+		background-image: url("https://e1.pngegg.com/pngimages/794/940/png-clipart-rock-7-gray-and-brown-rock.png");
+		top: 150px;
+	}
+	#paper{
+		background-image: url("paper.jpeg");
+		top: 250px;
+	}
+	#scissors{
+		background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Scissors.png/508px-Scissors.png");
+		top: 350px;
+	}
+	#cpuBox{
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: 150px;
+		left: 700px;
+	}
+	#human_choice{
+		width: 300px;
+		height: 300px;
+		position: absolute;
+		background-size: fill;
+		background-size: contain;
+		background-repeat: no-repeat;
+		top: 150px;
+		left: 400px;
+	}
+	#playerScoreBox{
+		width:150px;
+		height: 50px;
+		position: absolute;
+		top: 20px;
+		left: 400px;
+		background-color: grey;	
+		font-size: 30px;
+
+	}
+	#cpuScoreBox{
+		width:150px;
+		height: 50px;
+		position: absolute;
+		top: 20px;
+		left: 700px;
+		background-color: grey;	
+		font-size: 30px;	
+	}
+</style>
+</head>
+<body>
+<div id="rock" class="button"> Rock </div>
+<div id = "paper" class="button"> Paper</div>
+<div id="scissors" class="button">Scissors</div>
+<div id="human_choice"> Your choice </div>
+<div id = "cpuBox"> CPU choice </div>
+<div id = "playerScoreBox"></div>
+<div id = "cpuScoreBox"></div>
+<script type="text/javascript">
+	var playerScore = 0
+	var cpuScore = 0
+	var choice
+	var cpu_choice = ["rockC", "paperC", "scissorsC"]
+	var choiceC
+	function cpu(){
+		var random = Math.round(Math.random()*2);
+		random = cpu_choice[random]
+		console.log(random)
+		choiceC = random
+		if (random == "rockC"){
+			cpuBox.style.backgroundImage = "url('https://e1.pngegg.com/pngimages/794/940/png-clipart-rock-7-gray-and-brown-rock.png')"
+		}
+		if (random == "paperC"){
+			cpuBox.style.backgroundImage = "url('paper.jpeg')"
+		}
+		if (random == "scissorsC"){
+			cpuBox.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Scissors.png/508px-Scissors.png')"
+		}
+		}
+
+	function scoreboard(){
+		if (choice == "rock" && choiceC == "rockC"){
+			// alert("Its a tie!")
+			console.log(cpuScore)
+			console.log(playerScore)
+	}
+		if (choice == "paper" && choiceC == "paperC"){
+			// alert("Its a tie!")
+			console.log(cpuScore)
+			console.log(playerScore)
+	}
+		if (choice == "scissors" && choiceC == "scissorsC"){
+			// alert("Its a tie!")
+			console.log(cpuScore)
+			console.log(playerScore)
+	}
+		if (choice == "rock" && choiceC == "paperC"){
+			// alert("CPU wins!")
+			cpuScore = cpuScore + 1
+			cpuScoreBox.innerText = "CPU score: " + cpuScore
+			console.log(cpuScore)
+			console.log(playerScore)
+		}
+		if (choice == "scissors" && choiceC == "rockC"){
+			// alert("CPU wins!")
+			cpuScore = cpuScore + 1
+			cpuScoreBox.innerText = "CPU score: " + cpuScore
+			console.log(cpuScore)
+			console.log(playerScore)
+		}
+		if (choice == "paper" && choiceC == "scissorsC"){
+			// alert("CPU wins!")
+			cpuScore = cpuScore + 1
+			cpuScoreBox.innerText = "CPU score: " + cpuScore
+			console.log(cpuScore)
+			console.log(playerScore)
+		}
+		if (choice == "rock" && choiceC == "scissorsC"){
+			// alert("Human wins!")
+			playerScore = playerScore + 1
+			playerScoreBox.innerText = "Human score: " + playerScore
+			console.log(playerScore)
+			console.log(cpuScore)
+		}
+		if (choice == "paper" && choiceC == "rockC"){
+			// alert("Human wins!")
+			playerScore = playerScore + 1
+			playerScoreBox.innerText = "Human score: " + playerScore
+			console.log(playerScore)
+			console.log(cpuScore)
+		}
+		if (choice == "scissors" && choiceC == "paperC"){
+			// alert("Human wins!")
+			playerScore = playerScore + 1
+			playerScoreBox.innerText = "Human score: " + playerScore
+			console.log(playerScore)
+			console.log(cpuScore)
+		}
+
+	}
+	rock.addEventListener("click", function(){
+		choice = "rock"
+		human_choice.style.backgroundImage = "url('https://e1.pngegg.com/pngimages/794/940/png-clipart-rock-7-gray-and-brown-rock.png')"
+		cpu()
+		scoreboard()
+
+	})
+	paper.addEventListener("click", function(){
+		choice = "paper"
+		human_choice.style.backgroundImage = "url('paper.jpeg')"
+		cpu()
+		scoreboard()
+	})
+	scissors.addEventListener("click", function(){
+		choice = "scissors"
+		human_choice.style.backgroundImage = "url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Scissors.png/508px-Scissors.png')"
+		cpu()
+		scoreboard()
+	})
+
+	
+</script>
+
+<a href="projects.html"> Go home </a>
+</body>
+</html>
