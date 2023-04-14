@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		.pup{
+			width: 100px;
+			height: 100px;
+			background-image:url(puppy.jpeg) ;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			transition: 1s;
+		}
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	
+	function makePuppy (){
+		var puppy = document.createElement("div")
+		document.body.appendChild(puppy)
+		puppy.classList.add('pup')
+		function move(){
+		puppy.style.left = Math.random() * 2000 +"px"
+		puppy.style.top = Math.random() * 1000 +"px"}
+
+		var timing = Math.round(Math.random()) * 2000
+		setInterval(move, timing)
+	}
+
+	for(var i = 0; i<1000; i = i+1){
+		makePuppy()
+	}
+
+	makePuppy()
+</script>
+</body>
+</html>
