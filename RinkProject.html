@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	#header{
+		font-size: 50px;
+		color: darkred;
+		position: relative;
+	}
+	#rink{
+		width: 900px;
+		height: 650px;
+		background-image: url("https://upload.wikimedia.org/wikipedia/commons/d/dd/HockeyRink-Zones.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	.equipment{
+		width: 100px;
+		height: 100px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+	}
+	#pucks{
+		background-image: url("https://www.gasolinealleyantiques.com/sports/hockey/images/puck/riverkings2.JPG");
+		top: 600px;
+	}
+	#cone{
+		background-image: url("https://imgprd19.hobbylobby.com/1/c3/bc/1c3bc2ac0a72533c543c93f324b9d841d481c66d/1400Wx1400H-680074-0219.jpg");
+		top: 600px;
+		left: 100px;
+	}
+	#line{
+		background-image: url("https://info.sharpwilkinson.com/hubfs/Images/Blog%20Images/EmDashBlog_1200x600.jpg");
+		top: 600px;
+		left: 200px;
+	}
+	#offense{
+		background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Red_X.svg/1024px-Red_X.svg.png");
+		top: 600px;
+		left: 300px;
+
+	}
+	#defense{
+		background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/O-Jolle_red.svg/1200px-O-Jolle_red.svg.png");
+		top: 600px;
+		left: 400px;
+	}
+
+</style>
+
+
+</head>
+<body>
+<center> <div id="header"> Using the equipment below, draw your drills out on the ice </div><div id="rink"></div></center>
+
+<div id="pucks" class="equipment"></div>
+<div id="cone" class="equipment"></div>
+<div id="line" class="equipment"></div>
+<div id="offense" class="equipment"></div>
+<div id="defense" class="equipment"></div>
+
+<script type="text/javascript">
+	
+	var image;
+    var equipm;
+	
+    function makeEquipm() { 
+        equipm = document.createElement("div");
+        equipm.style.width = "50px";
+        equipm.style.height = "50px";
+        equipm.style.borderRadius = "50%";
+        equipm.style.position = "absolute";
+        equipm.style.backgroundImage = "url("+image+" )";
+       	equipm.style.backgroundSize = "cover";
+		document.body.appendChild(equipm);
+        equipm.style.left = event.clientX - 25+ "px";
+        equipm.style.top = event.clientY - 25 + "px";
+    }
+          rink.addEventListener("click", makeEquipm);
+
+
+    pucks.addEventListener("click", function() {
+
+        image = "https://www.gasolinealleyantiques.com/sports/hockey/images/puck/riverkings2.JPG"
+    });
+
+    cone.addEventListener("click", function() {
+
+        image = "https://imgprd19.hobbylobby.com/1/c3/bc/1c3bc2ac0a72533c543c93f324b9d841d481c66d/1400Wx1400H-680074-0219.jpg"
+    });
+
+    line.addEventListener("click", function() {
+
+        image = "https://info.sharpwilkinson.com/hubfs/Images/Blog%20Images/EmDashBlog_1200x600.jpg"
+    });
+    offense.addEventListener("click", function() {
+
+        image = "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Red_X.svg/1024px-Red_X.svg.png"
+    });
+    defense.addEventListener("click", function() {
+
+        image = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/O-Jolle_red.svg/1200px-O-Jolle_red.svg.png"
+    });
+</script>
+
+<a href="projects.html"> Back to Projects</a>
+</body>
+</html>
